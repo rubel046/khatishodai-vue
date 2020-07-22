@@ -1,0 +1,52 @@
+body{
+	font-family: 'Roboto', sans-serif;
+}
+/*Typography*/
+.actev{
+	color:green!important;
+	font-weight: bold;
+}
+/*Header Part*/
+.logo-box{
+	background-color:#fff!important;
+}
+.top-menu a{
+	color:#000!important;
+}
+.search{
+	width: 500px;
+    position: relative;
+    top: 17px;
+    left: 102px;
+}
+
+/*Left Side Menu*/
+.left-side-menu{
+	background-color:#84BC34!important;
+	color:#fff!important;
+}
+#sidebar-menu a{
+	padding: 10px 18px;
+    font-size: 16px!important;
+    font-weight: lighter;
+}
+.sidebar-menu img{
+	margin-right:3px;
+}
+
+/*Content*/
+.pan .right-part h3{
+	margin:0!important;
+}
+.pan .right-part p{
+	margin:0!important;
+}
+.orders-section a{
+	padding: 0 25px;
+    color: #000;
+}
+
+/*Message Section*/
+.contact p{
+	margin-bottom:4px!important;
+}

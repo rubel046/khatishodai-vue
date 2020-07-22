@@ -1,0 +1,28 @@
+@media screen and (min-width:685px) and (max-width: 900px){
+	.topnav-menu-left .search{
+		width:350px!important;
+	}
+}
+@media screen and (min-width:414px) and (max-width: 684px){
+/*Header Seciton*/
+.left-side-menu-light .navbar-custom .topnav-menu .nav-link {
+    padding: 2px!important;
+    font-size: 13px!important;
+}
+.topnav-menu-left .search{
+		width:160px!important;
+	}
+
+/*Content*/
+
+.content-page .table-centered td, .table-centered th {
+    font-size: 13px;
+}
+
+}
+@media screen and (min-width: 250px) and (max-width: 413px){
+	.left-side-menu-light .navbar-custom .topnav-menu .nav-link {
+    padding: 1px!important;
+    font-size: 7px!important;
+}
+}
