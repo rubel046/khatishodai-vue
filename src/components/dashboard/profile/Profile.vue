@@ -4,95 +4,80 @@
         <!-- Start Content-->
         <div class="container-fluid">
 
-            <div class="orders-section p-2">
-                <span class="h4 mr-3">Orders</span>
+            <div class="profile-password-section p-2">
+                <span class="h4 mr-3">Manage Profile</span>
+                <span class="h4">& Password</span>
                 <div class="card mt-2">
-                    <div class="card-body">
-                        <a href="">Awating Payment</a>
-                        <a href="">Awating Shipment</a>
-                        <a href="">Awating Delivery</a>
-                        <a href="">Disputs</a>
-                        <a href="">Unread Order Message</a>
+                    <div class="card-header">
+                        <h3>Basic Info</h3>
                     </div>
-
-                </div>
-                <div class="card">
                     <div class="card-body">
                         <form action="" method="post">
-                            <div class="row">
-                                <div class="col-12 col-lg-4">
-                                    <span>Order Number</span>
-                                    <span><input type="text" class="form-control"></span>
+                            <div class="form-group row">
+                                <div class="col-2">
+                                    <p>Your Name</p>
                                 </div>
-                                <div class="col-12 col-lg-6">
-                                    <div class="row">
-                                        <div class="col-8">
-                                            <span>Product</span>
-                                            <span><input type="text" class="form-control"></span>
-                                        </div>
-                                        <div class="col-4">
-                                            <input type="submit" class="mt-4 btn btn-warning">
-                                        </div>
-                                    </div>
+                                <div class="col-10">
+                                    <input type="text" class="form-control" name="name" placeholder="Your Name">
                                 </div>
-                                <div class="col-12 col-lg-2">
-                                    <select name="" id="" class="form-control mt-4">
-                                        <option value="">More Filter</option>
-                                        <option value="">More Filter</option>
-                                        <option value="">More Filter</option>
-                                        <option value="">More Filter</option>
-                                    </select>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2">
+                                    <p>Your Email</p>
+                                </div>
+                                <div class="col-10">
+                                    <input type="email" class="form-control" name="email" placeholder="Your Email">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2">
+                                    <p>Photo</p>
+                                </div>
+                                <div class="col-10">
+                                    <input type="File" class="form-control" name="photo">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2">
+                                    <p>About Me</p>
+                                </div>
+                                <div class="col-10">
+                                    <textarea name="about_me" id="about_me" cols="30" rows="10"
+                                              class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <p>Change Your Password?</p>
+                            <div class="form-group row">
+                                <div class="col-2">
+                                    <p>Your Password</p>
+                                </div>
+                                <div class="col-10">
+                                    <input type="text" class="form-control" name="password" placeholder="Your Password">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2">
+                                    <p>Confirm Password</p>
+                                </div>
+                                <div class="col-10">
+                                    <input type="text" class="form-control" name="password"
+                                           placeholder="Confirm Password">
                                 </div>
                             </div>
                         </form>
-                    </div><!-- .card-body end -->
-                </div><!-- .card-end -->
-                <div class="product-table">
-                    <div class="card">
-                        <div class="card-body">
-                            <table class="table table-striped">
-                                <thead class="bg-light">
-                                <tr>
-                                    <th>Product</th>
-                                    <th>Product Action</th>
-                                    <th>Order Status</th>
-                                    <th>Order Action</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>Lorem Ipsum</td>
-                                    <td>Lorem Ipsum</td>
-                                    <td>Lorem Ipsum</td>
-                                    <td>Lorem Ipsum</td>
-                                </tr>
-                                <tr>
-                                    <td>Lorem Ipsum</td>
-                                    <td>Lorem Ipsum</td>
-                                    <td>Lorem Ipsum</td>
-                                    <td>Lorem Ipsum</td>
-                                </tr>
-                                <tr>
-                                    <td>Lorem Ipsum</td>
-                                    <td>Lorem Ipsum</td>
-                                    <td>Lorem Ipsum</td>
-                                    <td>Lorem Ipsum</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
                     </div>
                 </div>
-            </div><!-- .orders-section end -->
+            </div><!-- .profile-password-section end -->
 
-        </div><!-- end container-fluid -->
+        </div>
+        <!-- end container-fluid -->
 
     </div>
 </template>
 
 <script>
     export default {
-        name: 'Dashboard',
+        name: 'Profile',
 
         data: () => ({}),
     }

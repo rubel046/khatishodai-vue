@@ -1,220 +1,145 @@
 <template>
     <div class="content">
 
-        <!-- Start Content-->
         <div class="container-fluid">
 
-            <!-- start page title -->
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box">
-
-                        <h4 class="page-title">Light Sidebar</h4>
+                        <h4 class="page-title">Message List</h4>
                     </div>
                 </div>
             </div>
-            <!-- end page title -->
 
-            <div class="row">
-                <div class="col-lg-6 col-xl-3">
-                    <div class="card widget-box-three pan">
-                        <div class="card-body">
-                            <div class="overflow-hidden">
-                                <div class="float-left left-part">
-                                    <img src="@/assets/dashboard/images/dash1.png" alt="">
+                <div class="row">
+                    <div class="col-sm-12 col-12 col-md-12 col-lg-6">
+                        <div class="message-list">
+                            <div id="sidepanel">
+                                <div id="search">
+                                    <input type="text" class="form-control" placeholder="Search contacts..." />
                                 </div>
-
-                                <div class="float-right right-part">
-                                    <h3>100</h3>
-                                    <p>Cart Product</p>
+                                <div id="contacts">
+                                    <ul>
+                                        <li class="contact bg-light mt-2 p-2">
+                                            <div class="row">
+                                                <div class="col-2">
+                                                    <img class="w-100 mt-3 rounded-circle" src="http://emilcarlsson.se/assets/louislitt.png" alt="" />
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="meta">
+                                                        <p class="name">Louis Litt <b class="badge badge-danger"> 2 </b></p>
+                                                        <p class="conpany-name">Company Name Line Here</p>
+                                                        <p class="preview">You just got LITT up, Mike.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="product-and-time">
+                                                        <p>2020-04-04</p>
+                                                        <img class="w-75" src="https://www.virtuix.com/wp-content/uploads/2014/12/shoes_product.png"
+                                                             alt="" />
+                                                    </div>
+                                                </div>
+                                            </div><!-- .row end -->
+                                        </li>
+                                        <li class="contact bg-light mt-2 p-2">
+                                            <div class="row">
+                                                <div class="col-2">
+                                                    <img class="w-100 mt-3 rounded-circle" src="http://emilcarlsson.se/assets/louislitt.png" alt="" />
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="meta">
+                                                        <p class="name">Louis Litt <b class="badge badge-danger"> 2 </b></p>
+                                                        <p class="conpany-name">Company Name Line Here</p>
+                                                        <p class="preview">You just got LITT up, Mike.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="product-and-time">
+                                                        <p>2020-04-04</p>
+                                                        <img class="w-75" src="https://www.virtuix.com/wp-content/uploads/2014/12/shoes_product.png"
+                                                             alt="" />
+                                                    </div>
+                                                </div>
+                                            </div><!-- .row end -->
+                                        </li>
+                                        <li class="contact bg-light mt-2 p-2">
+                                            <div class="row">
+                                                <div class="col-2">
+                                                    <img class="w-100 mt-3 rounded-circle" src="http://emilcarlsson.se/assets/louislitt.png" alt="" />
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="meta">
+                                                        <p class="name">Louis Litt <b class="badge badge-danger"> 2 </b></p>
+                                                        <p class="conpany-name">Company Name Line Here</p>
+                                                        <p class="preview">You just got LITT up, Mike.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="product-and-time">
+                                                        <p>2020-04-04</p>
+                                                        <img class="w-75" src="https://www.virtuix.com/wp-content/uploads/2014/12/shoes_product.png"
+                                                             alt="" />
+                                                    </div>
+                                                </div>
+                                            </div><!-- .row end -->
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- end col -->
-                <div class="col-lg-6 col-xl-3">
-                    <div class="card widget-box-three pan">
-                        <div class="card-body">
-                            <div class="overflow-hidden">
-                                <div class="float-left left-part">
-                                    <img src="@/assets/dashboard/images/dash2.png" alt="">
-                                </div>
+                    <div class="col-sm-12 col-12 col-md-12 col-lg-6">
+                        <div class="message">
+                            <div class="contact-profile bg-light p-2">
+                                <div class="contact-profile-user row">
+                                    <div class="col-3">
+                                        <img class="w-50 rounded-circle" src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                                    </div>
 
-                                <div class="float-right right-part">
-                                    <h3>50</h3>
-                                    <p>Wishlist Product</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end col -->
-                <div class="col-lg-6 col-xl-3">
-                    <div class="card widget-box-three pan">
-                        <div class="card-body">
-                            <div class="overflow-hidden">
-                                <div class="float-left left-part">
-                                    <img src="@/assets/dashboard/images/dash3.png" alt="">
-                                </div>
-
-                                <div class="float-right right-part">
-                                    <h3>1030</h3>
-                                    <p>Completed Order</p>
+                                    <div class="col-9">
+                                        <p>Mehedi Hassan</p>
+                                        <span>Fri, Apr 29, 2020 | 10:10 PM</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end col -->
-                <div class="col-lg-6 col-xl-3">
-                    <div class="card widget-box-three pan">
-                        <div class="card-body">
-                            <div class="overflow-hidden">
-                                <div class="float-left left-part">
-                                    <img src="@/assets/dashboard/images/dash4.png" alt="">
-                                </div>
+                            <div class="messages">
+                                <ul>
+                                    <li class="sent bg-primary text-white p-2 mb-2">
+                                        <span class="time_date"> April 26, 2020 at 7:59pm</span>
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting
+                                            industry. Lorem Ipsum has been the industry's standard dummy text ever
+                                            since the 1500s, when an unknown printer took a
+                                            galley of type and scrambled it to make a type specimen.
+                                        </p>
+                                    </li>
+                                    <li class="replies bg-info text-white p-2">
+                                        <span class="time_date"> April 26, 2020 at 7:59pm</span>
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting
+                                            industry. Lorem Ipsum has been the industry's standard dummy text ever
+                                            since the 1500s, when an unknown printer took a
+                                            galley of type and scrambled it to make a type specimen.
+                                        </p>
+                                    </li>
 
-                                <div class="float-right right-part">
-                                    <h3>9050Tk</h3>
-                                    <p>Total Payment</p>
+                                </ul>
+                            </div>
+                            <div class="message-input">
+                                <div class="wrap">
+                                    <input type="text" class="form-control" placeholder="Type a message…" />
+                                    <!-- <i class="fa fa-paperclip attachment" aria-hidden="true"></i> -->
+                                    <input type="submit" class="btn btn-primary mt-2 btn-sm">
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
-                <!-- end col -->
-            </div>
-            <!-- end row -->
-
-            <div class="row">
-                <!-- end col -->
-
-                <div class="col-12">
-                    <div class="card-box">
-                        <span class="header-title mb-2 font-weight-bold mr-5">Order History</span>
-                        <a href="" class=" mb-3 btn btn-outline-success btn-sm rounded-pill">View All Order</a>
-
-                        <div class="table-responsive">
-                            <table class="table table-hover table-centered m-0">
-                                <thead>
-                                <tr>
-                                    <th>Order Number</th>
-                                    <th>Product Price</th>
-                                    <th>Date</th>
-                                    <th>Status</th>
-                                    <th>Ship To</th>
-                                    <th>Details</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>W26587932</td>
-                                    <td>350 tk</td>
-                                    <td>10-07-2020</td>
-                                    <td>In Process</td>
-                                    <td>Motijheel c/A, Dhaka 1000</td>
-                                    <td>view details</td>
-                                </tr>
-                                <tr>
-                                    <td>W26587932</td>
-                                    <td>350 tk</td>
-                                    <td>10-07-2020</td>
-                                    <td>In Process</td>
-                                    <td>Motijheel c/A, Dhaka 1000</td>
-                                    <td>view details</td>
-                                </tr>
-                                <tr>
-                                    <td>W26587932</td>
-                                    <td>350 tk</td>
-                                    <td>10-07-2020</td>
-                                    <td>In Process</td>
-                                    <td>Motijheel c/A, Dhaka 1000</td>
-                                    <td>view details</td>
-                                </tr>
 
 
-                                </tbody>
-                            </table>
 
-                        </div>
-                        <!-- table-responsive -->
-                    </div>
-                    <!-- end card -->
-                </div>
-                <!-- end col -->
-
-            </div>
-            <!-- end row -->
-
-            <div class="row">
-                <!-- end col -->
-
-                <div class="col-12">
-                    <div class="card-box">
-                        <span class="header-title mb-2 font-weight-bold mr-5">Transaction History</span>
-                        <a href="" class=" mb-3 btn btn-outline-success btn-sm rounded-pill">View All Transaction</a>
-
-                        <div class="table-responsive">
-                            <table class="table table-hover table-centered m-0">
-                                <thead>
-                                <tr>
-                                    <th>Order Number</th>
-                                    <th>Amount Positon</th>
-                                    <th>Order Date</th>
-                                    <th>Payment Method</th>
-                                    <th>Status</th>
-                                    <th>Details</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>W26587932</td>
-                                    <td>350 tk</td>
-                                    <td>10-07-2020</td>
-                                    <td>Bikash</td>
-                                    <td>Compleated</td>
-                                    <td>view details</td>
-                                </tr>
-                                <tr>
-                                    <td>W26587932</td>
-                                    <td>350 tk</td>
-                                    <td>10-07-2020</td>
-                                    <td>Bikash</td>
-                                    <td>Compleated</td>
-                                    <td>view details</td>
-                                </tr>
-                                <tr>
-                                    <td>W26587932</td>
-                                    <td>350 tk</td>
-                                    <td>10-07-2020</td>
-                                    <td>Bikash</td>
-                                    <td>Compleated</td>
-                                    <td>view details</td>
-                                </tr>
-                                <tr>
-                                    <td>W26587932</td>
-                                    <td>350 tk</td>
-                                    <td>10-07-2020</td>
-                                    <td>Bikash</td>
-                                    <td>Compleated</td>
-                                    <td>view details</td>
-                                </tr>
-                                </tbody>
-                            </table>
-
-                        </div>
-                        <!-- table-responsive -->
-                    </div>
-                    <!-- end card -->
-                </div>
-                <!-- end col -->
-
-            </div>
-            <!-- end row -->
-
-        </div>
-        <!-- end container-fluid -->
+        </div><!-- end container-fluid -->
 
     </div>
 </template>

@@ -1,28 +1,31 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <v-app>
+        <component :is="layout">
+            <Notification></Notification>
+
+            <modals-container/>
+
+            <router-view/>
+        </component>
+    </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+    import Notification from "./components/shared/Notification";
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+    const DEFAULT_LAYOUT = 'default';
+
+    export default {
+        name: 'App',
+
+        components: {
+            Notification
+        },
+
+        computed: {
+            layout() {
+                return (this.$route.meta.layout || DEFAULT_LAYOUT) + '-layout'
+            }
+        }
+    };
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

@@ -4,7 +4,6 @@
 
 <script>
     export default {
-        mounted() {
-        }
+        name: 'Notification',
     }
 </script>

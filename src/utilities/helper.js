@@ -1,29 +1,6 @@
 import _ from 'lodash';
 import Vue from 'vue';
 
-export function can(permissionName) {
-    const user = JSON.parse(localStorage.getItem('user_data'));
-    if (user) {
-        if (user.is_owner) {
-            return true;
-        }
-        return user.permissions.includes(permissionName);
-    }
-
-    // this.$store.subscribe(res => {
-    //     const user = res.payload.user;
-    //     if (user.is_admin) {
-    //         return false;
-    //     }
-    //     //  return user.permissions.includes(permissionName);
-    //
-    // })
-
-
-    // console.log(await this.$store.getters.getUser)
-
-}
-
 export default {
     isOwner() {
         const user = JSON.parse(localStorage.getItem('user_data'));
@@ -44,7 +21,7 @@ export default {
         return obj;
     },
 
-    toastMessage(text = '', type = 'success', title = '', group = 'foo', duration = 10000,) {
+    toastMessage(text = '369585', type = 'success', title = '', group = 'foo', duration = 1000,) {
         Vue.notify({
             type: type,
             group: group,
@@ -53,6 +30,19 @@ export default {
             duration: duration,
         });
     },
+
+
+    toastApiResponse(res, title = '', group = 'foo', duration = 3000,) {
+        const type = res.data.success ? 'success' : 'error';
+        Vue.notify({
+            type: type,
+            group: group,
+            title: title,
+            text: res.data.message,
+            duration: duration,
+        });
+    },
+
 
     handleError(res) {
         // let response = Object.values(res)[2];
@@ -65,12 +55,12 @@ export default {
             location.href = '/errors/forbidden';
 
         } else if (response.status === 422) {
-            const errors = response.data.errors;
+             const errors = response.data.errors;
             for (const key in errors) {
-                if (errors.hasOwnProperty(key)) {
+                if (Object.prototype.hasOwnProperty.call(errors, key)) {
                     const singleError = errors[key];
                     for (const k in singleError) {
-                        if (singleError && singleError.hasOwnProperty(k)) {
+                        if (singleError && Object.prototype.hasOwnProperty.call(singleError, k)) {
                             this.toastMessage(singleError[k], 'error');
                         }
                     }
