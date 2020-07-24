@@ -34,3 +34,5 @@
         min-height: 0;
     }
 </style>
+
+<style src="@/assets/css/style.css"></style>

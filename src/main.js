@@ -16,15 +16,12 @@ import DashboardLayout from "./components/layouts/DashboardLayout";
 Vue.component('default-layout', DefaultLayout);
 Vue.component('dashboard-layout', DashboardLayout);
 
-
 require('@/assets/css/font/css/all.min.css')
 require('@/assets/css/responsive.css')
-require('@/assets/css/style.css')
 
 // require('@/assets/dashboard/css/style.css')
 // require('@/assets/dashboard/css/app.min.css')
 // require('@/assets/dashboard/css/bootstrap.min.css')
-
 
 
 Vue.use(VModal, {dynamic: true, injectModalsContainer: true})
