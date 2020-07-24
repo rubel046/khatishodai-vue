@@ -5,7 +5,11 @@
         <DashboardSidebar/>
 
         <div class="content-page">
-            <slot/>
+            <div class="content">
+                <div class="container-fluid">
+                    <slot/>
+                </div>
+            </div>
 
             <DashboardFooter/>
         </div>
@@ -31,3 +35,4 @@
 
 <style src="@/assets/dashboard/css/app.min.css"></style>
 <style src="@/assets/dashboard/css/style.css"></style>
+<style src="@/assets/dashboard/css/responsive.css"></style>

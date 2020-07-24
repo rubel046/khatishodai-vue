@@ -1,13 +1,11 @@
 <template>
-    <v-app>
-        <component :is="layout">
-            <Notification></Notification>
+    <component :is="layout">
+        <Notification></Notification>
 
-            <modals-container/>
+        <modals-container/>
 
-            <router-view/>
-        </component>
-    </v-app>
+        <router-view/>
+    </component>
 </template>
 
 <script>

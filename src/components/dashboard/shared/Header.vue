@@ -75,7 +75,7 @@
             <li class="admin-search">
                 <input type="text" class="form-control search rounded-pill" name="search" placeholder="Search Product">
             </li>
-
+            <li><img src="@/assets/dashboard/images/cart.png" class="cart-li" alt=""></li>
 
         </ul><!-- Header Middle End -->
 

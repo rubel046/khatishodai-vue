@@ -7,6 +7,8 @@ import Message from "../components/dashboard/message/Message";
 import Order from "../components/dashboard/order/Order";
 import Profile from "../components/dashboard/profile/Profile";
 import Coupon from "../components/dashboard/coupon/Coupon";
+import Transaction from "../components/dashboard/transaction/Transaction";
+import Wishlist from "../components/dashboard/wishlist/Wishlist";
 
 Vue.use(VueRouter);
 
@@ -41,6 +43,18 @@ export default new VueRouter({
                     path: 'orders',
                     name: 'Order',
                     component: Order,
+                    meta: {layout: 'dashboard'},
+                },
+                {
+                    path: 'transaction-history',
+                    name: 'TransactionHistory',
+                    component: Transaction,
+                    meta: {layout: 'dashboard'},
+                },
+                {
+                    path: 'wishlist',
+                    name: 'Wishlist',
+                    component: Wishlist,
                     meta: {layout: 'dashboard'},
                 },
                 {

@@ -55,7 +55,7 @@ export default {
             location.href = '/errors/forbidden';
 
         } else if (response.status === 422) {
-             const errors = response.data.errors;
+            const errors = response.data.errors;
             for (const key in errors) {
                 if (Object.prototype.hasOwnProperty.call(errors, key)) {
                     const singleError = errors[key];

@@ -35,4 +35,6 @@
     }
 </style>
 
+<style src="@/assets/css/font/css/all.min.css"></style>
+<style src="@/assets/css/responsive.css"></style>
 <style src="@/assets/css/style.css"></style>
