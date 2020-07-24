@@ -6,13 +6,44 @@
                     <div class="col-md-3 col-lg-3 col-xl-3 col-sm-12 col-12" id="category">
                         <div class="category card mt-1">
                             <div class="card-heading category-heading bg-success p-2">
-                                <a href="" class="text-white">Categories</a><a href="" class="text-white float-right">View All</a>
+                                <a href="" class="text-white">Categories</a><a href="" class="text-white float-right">View
+                                All</a>
                             </div>
                             <div class="card-body category-list">
-                                <a href="#" class="active"><i class="fas fa-female"></i> Womens Clothing</a>
-                                <a href="#" class=""><i class="fas fa-tshirt"></i> Men’s Clothing</a>
+                                <div v-for="(category, index) in categories" v-bind:key="index">
+                                    <a href="#" class="active" v-if="category.children.length === 0">
+                                        <i class="fas fa-female"></i>
+                                        {{category.name}}
+                                    </a>
+
+
+                                    <a href="#" class="dropdown-toggle" role="button" :id="index" v-else
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                                            class="fas fa-tv"></i> {{category.name}}</a>
+                                    <div class="dropdown-menu" :aria-labelledby="index">
+                                        <div class="row">
+                                            <div class="col-4" v-for="(children, index2) in category.children"
+                                                 v-bind:key="index2">
+                                                <div class="submenu">
+                                                    <h4 class="submenu-title">{{children.name}} <span>({{Math.floor(Math.random() * (300000 - 250 + 1)) + 120}})</span>
+                                                    </h4>
+
+                                                    <template v-if="children.children">
+                                                        <a href="" v-for="(child, index3) in children.children"
+                                                           v-bind:key="index3">{{child.name}}</a>
+                                                    </template>
+                                                </div>
+                                            </div><!-- .eol-4 end -->
+                                        </div><!-- .row end -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-body category-list">
                                 <a href="#" class=""><i class="fas fa-phone"></i> Phones & Accessories</a>
-                                <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-tv"></i> Computer, Office, Security</a>
+                                <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                                        class="fas fa-tv"></i> Computer, Office, Security</a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                     <div class="row">
                                         <div class="col-4">
@@ -64,13 +95,6 @@
                                 </div><!-- .dropdown-container end -->
                                 <a href="#" class=""><i class="fas fa-charging-station"></i> Consumer Electronics</a>
                                 <a href="#" class=""><i class="fas fa-gem"></i> Jewelry & Watches</a>
-                                <a href="#" class=""><i class="fas fa-home"></i> Home & Garden, Appliance</a>
-                                <a href="#" class=""><i class="fas fa-shopping-bag"></i> Bags & Shoes</a>
-                                <a href="#" class=""><i class="fas fa-baby"></i> Toys, Kids & Baby</a>
-                                <a href="#" class=""><i class="fas fa-volleyball-ball"></i> Sports & Outdoors</a>
-                                <a href="#" class=""><i class="fas fa-user-md"></i> Beauty & Health, Hair</a>
-                                <a href="#" class=""><i class="fas fa-motorcycle"></i> Automobiles & Motorcycles </a>
-                                <a href="#" class=""><i class="fas fa-sm fa-tools"></i> Home Improvement, Tools</a>
                             </div>
                         </div>
                     </div><!-- .col-3 end -->
@@ -105,11 +129,13 @@
                                         <div class="card p-2">
                                             <div class="row">
                                                 <div class="col-3">
-                                                    <img src="@/assets/image/support.png" alt="" class="w-200 m-auto mt-5">
+                                                    <img src="@/assets/image/support.png" alt=""
+                                                         class="w-200 m-auto mt-5">
                                                 </div>
                                                 <div class="col-9">
                                                     <h2 class="featured-title h6">24/7 Friendly Support</h2>
-                                                    <p class="featured-content">Our support team always ready for you.</p>
+                                                    <p class="featured-content">Our support team always ready for
+                                                        you.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -118,11 +144,13 @@
                                         <div class="card p-2">
                                             <div class="row">
                                                 <div class="col-3">
-                                                    <img src="@/assets/image/delivery.png" alt="" class="w-200 m-auto mt-5">
+                                                    <img src="@/assets/image/delivery.png" alt=""
+                                                         class="w-200 m-auto mt-5">
                                                 </div>
                                                 <div class="col-9">
                                                     <h2 class="featured-title h6">Free Home Delivery</h2>
-                                                    <p class="featured-content">Free shipping on all area order above ৳1000</p>
+                                                    <p class="featured-content">Free shipping on all area order above
+                                                        ৳1000</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -131,11 +159,13 @@
                                         <div class="card p-2">
                                             <div class="row">
                                                 <div class="col-3">
-                                                    <img src="@/assets/image/quality.png" alt="" class="w-200 m-auto mt-5">
+                                                    <img src="@/assets/image/quality.png" alt=""
+                                                         class="w-200 m-auto mt-5">
                                                 </div>
                                                 <div class="col-9">
                                                     <h2 class="featured-title h6">Quality Guaranteed</h2>
-                                                    <p class="featured-content">If your product aren't perfect, return.</p>
+                                                    <p class="featured-content">If your product aren't perfect,
+                                                        return.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -172,7 +202,9 @@
                                     <span class="bg-success p-1 text-white position-absolute">-50%</span>
                                 </div>
                                 <p class="text-center font-weight-bold pt-2">Passion Fruit</p>
-                                <p><span>৳ 300.00</span>- <del>৳ 600.00</del></p>
+                                <p><span>৳ 300.00</span>-
+                                    <del>৳ 600.00</del>
+                                </p>
                             </div><!-- .singel-item end -->
                         </div><!-- .col-6 end -->
                         <div class="col-6 col-sm-6 col-md-2 mb-5 box-shadow">
@@ -184,7 +216,9 @@
                                     <span class="bg-success p-1 text-white position-absolute">-50%</span>
                                 </div>
                                 <p class="text-center font-weight-bold pt-2">Passion Fruit</p>
-                                <p><span>৳ 300.00</span>- <del>৳ 600.00</del></p>
+                                <p><span>৳ 300.00</span>-
+                                    <del>৳ 600.00</del>
+                                </p>
                             </div><!-- .singel-item end -->
                         </div><!-- .col-6 end -->
                         <div class="col-6 col-sm-6 col-md-2 mb-5 box-shadow">
@@ -196,7 +230,9 @@
                                     <span class="bg-success p-1 text-white position-absolute">-50%</span>
                                 </div>
                                 <p class="text-center font-weight-bold pt-2">Passion Fruit</p>
-                                <p><span>৳ 300.00</span>- <del>৳ 600.00</del></p>
+                                <p><span>৳ 300.00</span>-
+                                    <del>৳ 600.00</del>
+                                </p>
                             </div><!-- .singel-item end -->
                         </div><!-- .col-6 end -->
                         <div class="col-6 col-sm-6 col-md-2 mb-5 box-shadow">
@@ -208,7 +244,9 @@
                                     <span class="bg-success p-1 text-white position-absolute">-50%</span>
                                 </div>
                                 <p class="text-center font-weight-bold pt-2">Passion Fruit</p>
-                                <p><span>৳ 300.00</span>- <del>৳ 600.00</del></p>
+                                <p><span>৳ 300.00</span>-
+                                    <del>৳ 600.00</del>
+                                </p>
                             </div><!-- .singel-item end -->
                         </div><!-- .col-6 end -->
                         <div class="col-6 col-sm-6 col-md-2 mb-5 box-shadow">
@@ -220,7 +258,9 @@
                                     <span class="bg-success p-1 text-white position-absolute">-50%</span>
                                 </div>
                                 <p class="text-center font-weight-bold pt-2">Passion Fruit</p>
-                                <p><span>৳ 300.00</span>- <del>৳ 600.00</del></p>
+                                <p><span>৳ 300.00</span>-
+                                    <del>৳ 600.00</del>
+                                </p>
                             </div><!-- .singel-item end -->
                         </div><!-- .col-6 end -->
                         <div class="col-6 col-sm-6 col-md-2 mb-5 box-shadow">
@@ -232,7 +272,9 @@
                                     <span class="bg-success p-1 text-white position-absolute">-50%</span>
                                 </div>
                                 <p class="text-center font-weight-bold pt-2">Passion Fruit</p>
-                                <p><span>৳ 300.00</span>- <del>৳ 600.00</del></p>
+                                <p><span>৳ 300.00</span>-
+                                    <del>৳ 600.00</del>
+                                </p>
                             </div><!-- .singel-item end -->
                         </div><!-- .col-6 end -->
                         <div class="col-6 col-sm-6 col-md-2 mb-5 box-shadow">
@@ -244,7 +286,9 @@
                                     <span class="bg-success p-1 text-white position-absolute">-50%</span>
                                 </div>
                                 <p class="text-center font-weight-bold pt-2">Passion Fruit</p>
-                                <p><span>৳ 300.00</span>- <del>৳ 600.00</del></p>
+                                <p><span>৳ 300.00</span>-
+                                    <del>৳ 600.00</del>
+                                </p>
                             </div><!-- .singel-item end -->
                         </div><!-- .col-6 end -->
                         <div class="col-6 col-sm-6 col-md-2 mb-5 box-shadow">
@@ -256,7 +300,9 @@
                                     <span class="bg-success p-1 text-white position-absolute">-50%</span>
                                 </div>
                                 <p class="text-center font-weight-bold pt-2">Passion Fruit</p>
-                                <p><span>৳ 300.00</span>- <del>৳ 600.00</del></p>
+                                <p><span>৳ 300.00</span>-
+                                    <del>৳ 600.00</del>
+                                </p>
                             </div><!-- .singel-item end -->
                         </div><!-- .col-6 end -->
                         <div class="col-6 col-sm-6 col-md-2 mb-5 box-shadow">
@@ -268,7 +314,9 @@
                                     <span class="bg-success p-1 text-white position-absolute">-50%</span>
                                 </div>
                                 <p class="text-center font-weight-bold pt-2">Passion Fruit</p>
-                                <p><span>৳ 300.00</span>- <del>৳ 600.00</del></p>
+                                <p><span>৳ 300.00</span>-
+                                    <del>৳ 600.00</del>
+                                </p>
                             </div><!-- .singel-item end -->
                         </div><!-- .col-6 end -->
                         <div class="col-6 col-sm-6 col-md-2 mb-5 box-shadow">
@@ -280,7 +328,9 @@
                                     <span class="bg-success p-1 text-white position-absolute">-50%</span>
                                 </div>
                                 <p class="text-center font-weight-bold pt-2">Passion Fruit</p>
-                                <p><span>৳ 300.00</span>- <del>৳ 600.00</del></p>
+                                <p><span>৳ 300.00</span>-
+                                    <del>৳ 600.00</del>
+                                </p>
                             </div><!-- .singel-item end -->
                         </div><!-- .col-6 end -->
                         <div class="col-6 col-sm-6 col-md-2 mb-5 box-shadow">
@@ -292,7 +342,9 @@
                                     <span class="bg-success p-1 text-white position-absolute">-50%</span>
                                 </div>
                                 <p class="text-center font-weight-bold pt-2">Passion Fruit</p>
-                                <p><span>৳ 300.00</span>- <del>৳ 600.00</del></p>
+                                <p><span>৳ 300.00</span>-
+                                    <del>৳ 600.00</del>
+                                </p>
                             </div><!-- .singel-item end -->
                         </div><!-- .col-6 end -->
                         <div class="col-6 col-sm-6 col-md-2 mb-5 box-shadow">
@@ -304,7 +356,9 @@
                                     <span class="bg-success p-1 text-white position-absolute">-50%</span>
                                 </div>
                                 <p class="text-center font-weight-bold pt-2">Passion Fruit</p>
-                                <p><span>৳ 300.00</span>- <del>৳ 600.00</del></p>
+                                <p><span>৳ 300.00</span>-
+                                    <del>৳ 600.00</del>
+                                </p>
                             </div><!-- .singel-item end -->
                         </div><!-- .col-6 end -->
                     </div><!-- .row end -->
@@ -319,16 +373,21 @@
             <div class="container">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link active font-weight-bold" id="latest-tab" data-toggle="tab" href="#latest" role="tab" aria-controls="home" aria-selected="true">Latest</a>
+                        <a class="nav-link active font-weight-bold" id="latest-tab" data-toggle="tab" href="#latest"
+                           role="tab" aria-controls="home" aria-selected="true">Latest</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link font-weight-bold" id="most-popular-tab" data-toggle="tab" href="#most-popular" role="tab" aria-controls="post-popular" aria-selected="false">Most Popular</a>
+                        <a class="nav-link font-weight-bold" id="most-popular-tab" data-toggle="tab"
+                           href="#most-popular" role="tab" aria-controls="post-popular" aria-selected="false">Most
+                            Popular</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link font-weight-bold" id="best-sale-tab" data-toggle="tab" href="#best-sale" role="tab" aria-controls="best-sale" aria-selected="false">Best Sale</a>
+                        <a class="nav-link font-weight-bold" id="best-sale-tab" data-toggle="tab" href="#best-sale"
+                           role="tab" aria-controls="best-sale" aria-selected="false">Best Sale</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link font-weight-bold" id="offer-tab" data-toggle="tab" href="#offer" role="tab" aria-controls="offer" aria-selected="false">Offer</a>
+                        <a class="nav-link font-weight-bold" id="offer-tab" data-toggle="tab" href="#offer" role="tab"
+                           aria-controls="offer" aria-selected="false">Offer</a>
                     </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
@@ -343,7 +402,8 @@
                                     <div class="col-12 col-md-4 mt-4">
                                         <div class="card p-1">
                                             <div class="card-header">
-                                                <img src="@/assets/image/latest3.png" class="w-100 position-relative" alt="">
+                                                <img src="@/assets/image/latest3.png" class="w-100 position-relative"
+                                                     alt="">
                                             </div>
                                             <div class="off">
                                                 <span class="bg-success p-1 text-white position-absolute">New</span>
@@ -355,7 +415,8 @@
                                     <div class="col-12 col-md-4 mt-4">
                                         <div class="card p-1">
                                             <div class="card-header">
-                                                <img src="@/assets/image/latest4.png" class="w-100 position-relative" alt="">
+                                                <img src="@/assets/image/latest4.png" class="w-100 position-relative"
+                                                     alt="">
                                             </div>
                                             <div class="off">
                                                 <span class="bg-success p-1 text-white position-absolute">New</span>
@@ -367,7 +428,8 @@
                                     <div class="col-12 col-md-4 mt-4">
                                         <div class="card p-1">
                                             <div class="card-header">
-                                                <img src="@/assets/image/latest3.png" class="w-100 position-relative" alt="">
+                                                <img src="@/assets/image/latest3.png" class="w-100 position-relative"
+                                                     alt="">
                                             </div>
                                             <div class="off">
                                                 <span class="bg-success p-1 text-white position-absolute">New</span>
@@ -380,9 +442,15 @@
                             </div><!-- .col-12 end -->
                         </div><!-- .row end -->
                     </div>
-                    <div class="tab-pane fade" id="most-popular" role="tabpanel" aria-labelledby="most-popular-tab">Content Will Be Go Here</div>
-                    <div class="tab-pane fade" id="best-sale" role="tabpanel" aria-labelledby="best-sale-tab">Content Will Be Go Here</div>
-                    <div class="tab-pane fade" id="offer" role="tabpanel" aria-labelledby="offer-tab">Content Will Be Go Here</div>
+                    <div class="tab-pane fade" id="most-popular" role="tabpanel" aria-labelledby="most-popular-tab">
+                        Content Will Be Go Here
+                    </div>
+                    <div class="tab-pane fade" id="best-sale" role="tabpanel" aria-labelledby="best-sale-tab">Content
+                        Will Be Go Here
+                    </div>
+                    <div class="tab-pane fade" id="offer" role="tabpanel" aria-labelledby="offer-tab">Content Will Be Go
+                        Here
+                    </div>
                 </div><!-- .tab-content end -->
                 <div class="view-all-btn text-center mt-4">
                     <a href="" class="btn btn-outline-secondary">View All New Product <span>--&raquo;</span></a>
@@ -406,7 +474,9 @@
                             <p class="price font-weight-bold">৳ 300.00</p>
                             <div class="cart-btn">
                                 <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to cart</a>
-                                <a href="#" class="float-right favourite"><img src="@/assets/image/favoruite-icon.png" class="border border-light rounded-circle p-1" alt=""></a>
+                                <a href="#" class="float-right favourite"><img src="@/assets/image/favoruite-icon.png"
+                                                                               class="border border-light rounded-circle p-1"
+                                                                               alt=""></a>
                             </div>
                         </div><!-- .card end -->
                     </div><!-- .col-6 end -->
@@ -419,7 +489,9 @@
                             <p class="price font-weight-bold">৳ 300.00</p>
                             <div class="cart-btn">
                                 <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to cart</a>
-                                <a href="#" class="float-right favourite"><img src="@/assets/image/favoruite-icon.png" class="border border-light rounded-circle p-1" alt=""></a>
+                                <a href="#" class="float-right favourite"><img src="@/assets/image/favoruite-icon.png"
+                                                                               class="border border-light rounded-circle p-1"
+                                                                               alt=""></a>
                             </div>
                         </div><!-- .card end -->
                     </div><!-- .col-6 end -->
@@ -431,8 +503,11 @@
                             <p class="name">Fresh Soyabeen Oil -3L</p>
                             <p class="price font-weight-bold">৳ 300.00</p>
                             <div class="cart-btn">
-                                <a href="#" class="btn cart btn-outline-success active rounded-pill float-left">Add to cart</a>
-                                <a href="#" class="float-right  favourite "><img src="@/assets/image/favoruite-icon.png" class="border active-favourite border-light rounded-circle p-1" alt=""></a>
+                                <a href="#" class="btn cart btn-outline-success active rounded-pill float-left">Add to
+                                    cart</a>
+                                <a href="#" class="float-right  favourite "><img src="@/assets/image/favoruite-icon.png"
+                                                                                 class="border active-favourite border-light rounded-circle p-1"
+                                                                                 alt=""></a>
                             </div>
                         </div><!-- .card end -->
                     </div><!-- .col-6 end -->
@@ -445,7 +520,9 @@
                             <p class="price font-weight-bold">৳ 300.00</p>
                             <div class="cart-btn">
                                 <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to cart</a>
-                                <a href="#" class="float-right favourite"><img src="@/assets/image/favoruite-icon.png" class="border border-light rounded-circle p-1" alt=""></a>
+                                <a href="#" class="float-right favourite"><img src="@/assets/image/favoruite-icon.png"
+                                                                               class="border border-light rounded-circle p-1"
+                                                                               alt=""></a>
                             </div>
                         </div><!-- .card end -->
                     </div><!-- .col-6 end -->
@@ -458,7 +535,9 @@
                             <p class="price font-weight-bold">৳ 300.00</p>
                             <div class="cart-btn">
                                 <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to cart</a>
-                                <a href="#" class="float-right favourite"><img src="@/assets/image/favoruite-icon.png" class="border border-light rounded-circle p-1" alt=""></a>
+                                <a href="#" class="float-right favourite"><img src="@/assets/image/favoruite-icon.png"
+                                                                               class="border border-light rounded-circle p-1"
+                                                                               alt=""></a>
                             </div>
                         </div><!-- .card end -->
                     </div><!-- .col-6 end -->
@@ -471,7 +550,9 @@
                             <p class="price font-weight-bold">৳ 300.00</p>
                             <div class="cart-btn">
                                 <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to cart</a>
-                                <a href="#" class="float-right favourite"><img src="@/assets/image/favoruite-icon.png" class="border border-light rounded-circle p-1" alt=""></a>
+                                <a href="#" class="float-right favourite"><img src="@/assets/image/favoruite-icon.png"
+                                                                               class="border border-light rounded-circle p-1"
+                                                                               alt=""></a>
                             </div>
                         </div><!-- .card end -->
                     </div><!-- .col-6 end -->
@@ -484,7 +565,9 @@
                             <p class="price font-weight-bold">৳ 300.00</p>
                             <div class="cart-btn">
                                 <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to cart</a>
-                                <a href="#" class="float-right favourite"><img src="@/assets/image/favoruite-icon.png" class="border border-light rounded-circle p-1" alt=""></a>
+                                <a href="#" class="float-right favourite"><img src="@/assets/image/favoruite-icon.png"
+                                                                               class="border border-light rounded-circle p-1"
+                                                                               alt=""></a>
                             </div>
                         </div><!-- .card end -->
                     </div><!-- .col-6 end -->
@@ -497,7 +580,9 @@
                             <p class="price font-weight-bold">৳ 300.00</p>
                             <div class="cart-btn">
                                 <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to cart</a>
-                                <a href="#" class="float-right favourite"><img src="@/assets/image/favoruite-icon.png" class="border border-light rounded-circle p-1" alt=""></a>
+                                <a href="#" class="float-right favourite"><img src="@/assets/image/favoruite-icon.png"
+                                                                               class="border border-light rounded-circle p-1"
+                                                                               alt=""></a>
                             </div>
                         </div><!-- .card end -->
                     </div><!-- .col-6 end -->
@@ -510,7 +595,9 @@
                             <p class="price font-weight-bold">৳ 300.00</p>
                             <div class="cart-btn">
                                 <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to cart</a>
-                                <a href="#" class="float-right favourite"><img src="@/assets/image/favoruite-icon.png" class="border border-light rounded-circle p-1" alt=""></a>
+                                <a href="#" class="float-right favourite"><img src="@/assets/image/favoruite-icon.png"
+                                                                               class="border border-light rounded-circle p-1"
+                                                                               alt=""></a>
                             </div>
                         </div><!-- .card end -->
                     </div><!-- .col-6 end -->
@@ -523,7 +610,9 @@
                             <p class="price font-weight-bold">৳ 300.00</p>
                             <div class="cart-btn">
                                 <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to cart</a>
-                                <a href="#" class="float-right favourite"><img src="@/assets/image/favoruite-icon.png" class="border border-light rounded-circle p-1" alt=""></a>
+                                <a href="#" class="float-right favourite"><img src="@/assets/image/favoruite-icon.png"
+                                                                               class="border border-light rounded-circle p-1"
+                                                                               alt=""></a>
                             </div>
                         </div><!-- .card end -->
                     </div><!-- .col-6 end -->
@@ -536,7 +625,9 @@
                             <p class="price font-weight-bold">৳ 300.00</p>
                             <div class="cart-btn">
                                 <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to cart</a>
-                                <a href="#" class="float-right favourite"><img src="@/assets/image/favoruite-icon.png" class="border border-light rounded-circle p-1" alt=""></a>
+                                <a href="#" class="float-right favourite"><img src="@/assets/image/favoruite-icon.png"
+                                                                               class="border border-light rounded-circle p-1"
+                                                                               alt=""></a>
                             </div>
                         </div><!-- .card end -->
                     </div><!-- .col-6 end -->
@@ -549,7 +640,9 @@
                             <p class="price font-weight-bold">৳ 300.00</p>
                             <div class="cart-btn">
                                 <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to cart</a>
-                                <a href="#" class="float-right favourite"><img class="border border-light rounded-circle p-1" src="@/assets/image/favoruite-icon.png"></a>
+                                <a href="#" class="float-right favourite"><img
+                                        class="border border-light rounded-circle p-1"
+                                        src="@/assets/image/favoruite-icon.png"></a>
                             </div>
                         </div><!-- .card end -->
                     </div><!-- .col-6 end -->
@@ -602,8 +695,11 @@
                                 <p class="name">Fresh Soyabeen Oil -3L</p>
                                 <p class="price font-weight-bold">৳ 300.00</p>
                                 <div class="cart-btn">
-                                    <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to cart</a>
-                                    <a href="#" class="float-right favourite"><img class="border border-light rounded-circle p-1" src="@/assets/image/favoruite-icon.png"></a>
+                                    <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to
+                                        cart</a>
+                                    <a href="#" class="float-right favourite"><img
+                                            class="border border-light rounded-circle p-1"
+                                            src="@/assets/image/favoruite-icon.png"></a>
                                 </div>
                             </div><!-- .card end -->
                         </div><!-- .col-6 end -->
@@ -615,8 +711,11 @@
                                 <p class="name">Fresh Soyabeen Oil -3L</p>
                                 <p class="price font-weight-bold">৳ 300.00</p>
                                 <div class="cart-btn">
-                                    <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to cart</a>
-                                    <a href="#" class="float-right favourite"><img class="border border-light rounded-circle p-1" src="@/assets/image/favoruite-icon.png"></a>
+                                    <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to
+                                        cart</a>
+                                    <a href="#" class="float-right favourite"><img
+                                            class="border border-light rounded-circle p-1"
+                                            src="@/assets/image/favoruite-icon.png"></a>
                                 </div>
                             </div><!-- .card end -->
                         </div><!-- .col-6 end -->
@@ -628,8 +727,11 @@
                                 <p class="name">Fresh Soyabeen Oil -3L</p>
                                 <p class="price font-weight-bold">৳ 300.00</p>
                                 <div class="cart-btn">
-                                    <a href="#" class="btn cart btn-outline-success active rounded-pill float-left">Add to cart</a>
-                                    <a href="#" class="float-right favourite"><img class="border border-light rounded-circle p-1" src="@/assets/image/favoruite-icon.png"></a>
+                                    <a href="#" class="btn cart btn-outline-success active rounded-pill float-left">Add
+                                        to cart</a>
+                                    <a href="#" class="float-right favourite"><img
+                                            class="border border-light rounded-circle p-1"
+                                            src="@/assets/image/favoruite-icon.png"></a>
                                 </div>
                             </div><!-- .card end -->
                         </div><!-- .col-6 end -->
@@ -641,8 +743,11 @@
                                 <p class="name">Fresh Soyabeen Oil -3L</p>
                                 <p class="price font-weight-bold">৳ 300.00</p>
                                 <div class="cart-btn">
-                                    <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to cart</a>
-                                    <a href="#" class="float-right favourite"><img class="border border-light rounded-circle p-1" src="@/assets/image/favoruite-icon.png"></a>
+                                    <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to
+                                        cart</a>
+                                    <a href="#" class="float-right favourite"><img
+                                            class="border border-light rounded-circle p-1"
+                                            src="@/assets/image/favoruite-icon.png"></a>
                                 </div>
                             </div><!-- .card end -->
                         </div><!-- .col-6 end -->
@@ -654,8 +759,11 @@
                                 <p class="name">Fresh Soyabeen Oil -3L</p>
                                 <p class="price font-weight-bold">৳ 300.00</p>
                                 <div class="cart-btn">
-                                    <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to cart</a>
-                                    <a href="#" class="float-right favourite"><img class="border border-light rounded-circle p-1" src="@/assets/image/favoruite-icon.png"></a>
+                                    <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to
+                                        cart</a>
+                                    <a href="#" class="float-right favourite"><img
+                                            class="border border-light rounded-circle p-1"
+                                            src="@/assets/image/favoruite-icon.png"></a>
                                 </div>
                             </div><!-- .card end -->
                         </div><!-- .col-6 end -->
@@ -667,8 +775,11 @@
                                 <p class="name">Fresh Soyabeen Oil -3L</p>
                                 <p class="price font-weight-bold">৳ 300.00</p>
                                 <div class="cart-btn">
-                                    <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to cart</a>
-                                    <a href="#" class="float-right favourite"><img class="border border-light rounded-circle p-1" src="@/assets/image/favoruite-icon.png"></a>
+                                    <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to
+                                        cart</a>
+                                    <a href="#" class="float-right favourite"><img
+                                            class="border border-light rounded-circle p-1"
+                                            src="@/assets/image/favoruite-icon.png"></a>
                                 </div>
                             </div><!-- .card end -->
                         </div><!-- .col-6 end -->
@@ -680,8 +791,11 @@
                                 <p class="name">Fresh Soyabeen Oil -3L</p>
                                 <p class="price font-weight-bold">৳ 300.00</p>
                                 <div class="cart-btn">
-                                    <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to cart</a>
-                                    <a href="#" class="float-right favourite"><img class="border border-light rounded-circle p-1" src="@/assets/image/favoruite-icon.png"></a>
+                                    <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to
+                                        cart</a>
+                                    <a href="#" class="float-right favourite"><img
+                                            class="border border-light rounded-circle p-1"
+                                            src="@/assets/image/favoruite-icon.png"></a>
                                 </div>
                             </div><!-- .card end -->
                         </div><!-- .col-6 end -->
@@ -693,8 +807,11 @@
                                 <p class="name">Fresh Soyabeen Oil -3L</p>
                                 <p class="price font-weight-bold">৳ 300.00</p>
                                 <div class="cart-btn">
-                                    <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to cart</a>
-                                    <a href="#" class="float-right favourite"><img class="border border-light rounded-circle p-1" src="@/assets/image/favoruite-icon.png"></a>
+                                    <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to
+                                        cart</a>
+                                    <a href="#" class="float-right favourite"><img
+                                            class="border border-light rounded-circle p-1"
+                                            src="@/assets/image/favoruite-icon.png"></a>
                                 </div>
                             </div><!-- .card end -->
                         </div><!-- .col-6 end -->
@@ -706,8 +823,11 @@
                                 <p class="name">Fresh Soyabeen Oil -3L</p>
                                 <p class="price font-weight-bold">৳ 300.00</p>
                                 <div class="cart-btn">
-                                    <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to cart</a>
-                                    <a href="#" class="float-right favourite"><img class="border border-light rounded-circle p-1" src="@/assets/image/favoruite-icon.png"></a>
+                                    <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to
+                                        cart</a>
+                                    <a href="#" class="float-right favourite"><img
+                                            class="border border-light rounded-circle p-1"
+                                            src="@/assets/image/favoruite-icon.png"></a>
                                 </div>
                             </div><!-- .card end -->
                         </div><!-- .col-6 end -->
@@ -719,8 +839,11 @@
                                 <p class="name">Fresh Soyabeen Oil -3L</p>
                                 <p class="price font-weight-bold">৳ 300.00</p>
                                 <div class="cart-btn">
-                                    <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to cart</a>
-                                    <a href="#" class="float-right favourite"><img class="border border-light rounded-circle p-1" src="@/assets/image/favoruite-icon.png"></a>
+                                    <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to
+                                        cart</a>
+                                    <a href="#" class="float-right favourite"><img
+                                            class="border border-light rounded-circle p-1"
+                                            src="@/assets/image/favoruite-icon.png"></a>
                                 </div>
                             </div><!-- .card end -->
                         </div><!-- .col-6 end -->
@@ -732,8 +855,11 @@
                                 <p class="name">Fresh Soyabeen Oil -3L</p>
                                 <p class="price font-weight-bold">৳ 300.00</p>
                                 <div class="cart-btn">
-                                    <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to cart</a>
-                                    <a href="#" class="float-right favourite"><img class="border border-light rounded-circle p-1" src="@/assets/image/favoruite-icon.png"></a>
+                                    <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to
+                                        cart</a>
+                                    <a href="#" class="float-right favourite"><img
+                                            class="border border-light rounded-circle p-1"
+                                            src="@/assets/image/favoruite-icon.png"></a>
                                 </div>
                             </div><!-- .card end -->
                         </div><!-- .col-6 end -->
@@ -745,8 +871,11 @@
                                 <p class="name">Fresh Soyabeen Oil -3L</p>
                                 <p class="price font-weight-bold">৳ 300.00</p>
                                 <div class="cart-btn">
-                                    <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to cart</a>
-                                    <a href="#" class="float-right favourite"><img class="border border-light rounded-circle p-1" src="@/assets/image/favoruite-icon.png"></a>
+                                    <a href="#" class="btn cart btn-outline-success rounded-pill float-left">Add to
+                                        cart</a>
+                                    <a href="#" class="float-right favourite"><img
+                                            class="border border-light rounded-circle p-1"
+                                            src="@/assets/image/favoruite-icon.png"></a>
                                 </div>
                             </div><!-- .card end -->
                         </div><!-- .col-6 end -->
@@ -761,14 +890,29 @@
 </template>
 
 <script>
+    import helper from "../../utilities/helper";
+
     export default {
         name: 'Index',
 
         data: () => ({
+            categories: [],
         }),
 
-        mounted() {
+        created() {
+            this.getCategories();
+        },
 
+        methods: {
+            getCategories: function () {
+                this.axios.get('category')
+                    .then(res => {
+                        this.categories = res.data.result;
+                    })
+                    .catch(err => {
+                        helper.handleError(err)
+                    })
+            }
         }
     }
 </script>
