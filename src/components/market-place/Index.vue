@@ -40,11 +40,62 @@
                             </div>
 
                             <div class="card-body category-list">
-                                <a href="#" class=""><i class="fas fa-phone"></i> Phones & Accessories</a>
+                                <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLin"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                                        class="fas fa-tv"></i> Phone & accesories</a>
+                                    <div class="dropdown-menu sho" aria-labelledby="dropdownMenuLin">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="submenu">
+                                                <h4 class="submenu-title">PHone & Peripherals</h4>
+                                                <a href="">CPUs</a>
+                                                <a href="">Motherboards</a>
+                                                <a href="">Graphics Cards</a>
+                                                <a href="">Keyboards</a>
+                                                <a href="">Laptops</a>
+                                                <a href="">Tablets</a>
+                                                <a href="">Laptop Accessories</a>
+                                                <a href="">Tablet Accessories</a>
+                                                <a href="">Gaming Laptops</a>
+                                                <a href="">Ultraslim Laptops</a>
+                                            </div>
+                                        </div><!-- .eol-4 end -->
+                                        <div class="col-4">
+                                            <div class="submenu">
+                                                <h4 class="submenu-title">Components & Peripherals</h4>
+                                                <a href="">CPUs</a>
+                                                <a href="">Motherboards</a>
+                                                <a href="">Graphics Cards</a>
+                                                <a href="">Keyboards</a>
+                                                <a href="">Laptops</a>
+                                                <a href="">Tablets</a>
+                                                <a href="">Laptop Accessories</a>
+                                                <a href="">Tablet Accessories</a>
+                                                <a href="">Gaming Laptops</a>
+                                                <a href="">Ultraslim Laptops</a>
+                                            </div>
+                                        </div><!-- .eol-4 end -->
+                                        <div class="col-4">
+                                            <div class="submenu">
+                                                <h4 class="submenu-title">Components & Peripherals</h4>
+                                                <a href="">CPUs</a>
+                                                <a href="">Motherboards</a>
+                                                <a href="">Graphics Cards</a>
+                                                <a href="">Keyboards</a>
+                                                <a href="">Laptops</a>
+                                                <a href="">Tablets</a>
+                                                <a href="">Laptop Accessories</a>
+                                                <a href="">Tablet Accessories</a>
+                                                <a href="">Gaming Laptops</a>
+                                                <a href="">Ultraslim Laptops</a>
+                                            </div>
+                                        </div><!-- .eol-4 end -->
+                                    </div><!-- .row end -->
+                                </div><!-- .dropdown-container end -->
                                 <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink"
                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
                                         class="fas fa-tv"></i> Computer, Office, Security</a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <div class="dropdown-menu sho" aria-labelledby="dropdownMenuLink">
                                     <div class="row">
                                         <div class="col-4">
                                             <div class="submenu">
