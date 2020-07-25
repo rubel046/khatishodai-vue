@@ -3,13 +3,7 @@ body {
 }
 
 /*Typography*/
-.sho{
-    position: absolute;
-    transform: translate3d(-15px, -146px, 0px);
-    top: 0px;
-    left: 0px;
-    will-change: transform;
-}
+
 
 
 /*Header Top Style*/
@@ -57,11 +51,14 @@ body {
 }
 
 .category-menu-section .show {
-    top: 184px!important;
+    /*top: 50vh!important;*/
     width: 652px;
     padding: 29px;
-    left: 256px!important;
+    left:240px!important;
+    /*left: 256px!important;*/
+    z-index: 12222;
     height:auto;
+    transform: translate3d(0px, 0px, 0px)!important;
 }
 
 .category-list a {
