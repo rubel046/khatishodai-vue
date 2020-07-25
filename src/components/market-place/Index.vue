@@ -40,10 +40,10 @@
                             </div>
 
                             <div class="card-body category-list">
-                                <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLin"
+                                <a href="#" class="dropdown-toggle" role="button" id="777"
                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
                                         class="fas fa-tv"></i> Phone & accesories</a>
-                                    <div class="dropdown-menu sho" aria-labelledby="dropdownMenuLin">
+                                    <div class="dropdown-menu sho" aria-labelledby="777">
                                     <div class="row">
                                         <div class="col-4">
                                             <div class="submenu">
@@ -92,10 +92,10 @@
                                         </div><!-- .eol-4 end -->
                                     </div><!-- .row end -->
                                 </div><!-- .dropdown-container end -->
-                                <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink"
+                                <a href="#" class="dropdown-toggle" role="button" id="888"
                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
                                         class="fas fa-tv"></i> Computer, Office, Security</a>
-                                <div class="dropdown-menu sho" aria-labelledby="dropdownMenuLink">
+                                <div class="dropdown-menu sho" aria-labelledby="888">
                                     <div class="row">
                                         <div class="col-4">
                                             <div class="submenu">

@@ -57,11 +57,11 @@ body {
 }
 
 .category-menu-section .show {
-    width: 800px !important;
-    height: auto;
-    top: 188px !important;
-    left: 270px !important;
-    padding: 15px;
+    top: 184px!important;
+    width: 652px;
+    padding: 29px;
+    left: 256px!important;
+    height:auto;
 }
 
 .category-list a {
