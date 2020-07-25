@@ -6,21 +6,21 @@
                     <div class="col-md-3 col-lg-3 col-xl-3 col-sm-12 col-12" id="category">
                         <div class="category card mt-1">
                             <div class="card-heading category-heading bg-success p-2">
-                                <a href="" class="text-white">Categories</a><a href="" class="text-white float-right">View
-                                All</a>
+                                <span class="text-white">Categories</span>
+                                <a href="" class="text-white float-right">View All</a>
                             </div>
                             <div class="card-body category-list">
                                 <div v-for="(category, index) in categories" v-bind:key="index">
-                                    <a href="#" class="active" v-if="category.children.length === 0">
+                                    <a href="Javascript:void(0)" class="active" v-if="category.children.length === 0">
                                         <i class="fas fa-female"></i>
                                         {{category.name}}
                                     </a>
 
 
-                                    <a href="#" class="dropdown-toggle" role="button" :id="index" v-else
+                                    <a href="Javascript:void(0)" class="dropdown-toggle" role="button" :id="index" v-else
                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
                                             class="fas fa-tv"></i> {{category.name}}</a>
-                                    <div class="dropdown-menu" :aria-labelledby="index">
+                                    <div class="dropdown-menu sho" :aria-labelledby="index">
                                         <div class="row">
                                             <div class="col-4" v-for="(children, index2) in category.children"
                                                  v-bind:key="index2">
@@ -33,8 +33,8 @@
                                                            v-bind:key="index3">{{child.name}}</a>
                                                     </template>
                                                 </div>
-                                            </div><!-- .eol-4 end -->
-                                        </div><!-- .row end -->
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
