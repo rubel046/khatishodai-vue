@@ -212,7 +212,7 @@ body {
     position: unset;
 }
 .vm--container{
-    position: unset;
+    /*position: unset;*/
 }
 .register{
     top:50px;
