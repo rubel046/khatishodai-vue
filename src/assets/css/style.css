@@ -193,7 +193,7 @@ body {
 /*Registration start*/
 .main-register {
     background: rgb(0, 0, 0, 0.4);
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
@@ -202,6 +202,7 @@ body {
     align-items: center;
     z-index: 99;
 }
+
 .v-application--wrap{
     position: unset!important;
 }
